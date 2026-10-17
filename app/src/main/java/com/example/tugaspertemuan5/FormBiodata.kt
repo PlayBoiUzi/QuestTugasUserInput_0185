@@ -272,5 +272,18 @@ fun FormBiodata(modifier: Modifier = Modifier) {
                         }
                     }
 
+                    Spacer(modifier = Modifier.height(20.dp))
+
+                    // --- Section Skill ---
+                    Text(
+                        text = stringResource(id = R.string.title_pilih_skill),
+                        fontSize = 15.sp,
+                        fontWeight = FontWeight.Bold,
+                        color = colorResource(id = R.color.black),
+                        modifier = Modifier.fillMaxWidth()
+                    )
+
+                    Spacer(modifier = Modifier.height(8.dp))
+
 
 
