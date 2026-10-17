@@ -31,3 +31,8 @@
     <string name="preview_biodata">Nama: %1$s %2$s | Email: %3$s | Tgl: %4$s | Exp: %5$s | Skill: %6$s</string>
     <string name="empty_value">-</string>
 
+    <!-- Accessibility Descriptions -->
+    <string name="desc_bg_header">Header Background</string>
+    <string name="desc_icon_calendar">Icon Calendar</string>
+    <string name="desc_icon_dropdown">Icon Dropdown</string>
+</resources>
