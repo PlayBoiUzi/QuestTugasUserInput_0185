@@ -124,4 +124,47 @@ fun FormBiodata(modifier: Modifier = Modifier) {
                 .fillMaxSize()
                 .padding(innerPadding)
         ) {
+            // 1. Gambar Latar Belakang
+            Image(
+                painter = painterResource(id = R.drawable.legrab),
+                contentDescription = stringResource(id = R.string.desc_bg_header),
+                modifier = Modifier
+                    .fillMaxWidth()
+                    .height(280.dp),
+                contentScale = ContentScale.Crop
+            )
+
+            // 2. Card/Surface Form Mengapung
+            Surface(
+                modifier = Modifier
+                    .fillMaxSize()
+                    .padding(top = 220.dp),
+                shape = RoundedCornerShape(topStart = 32.dp, topEnd = 32.dp),
+                color = colorResource(id = R.color.bg_card_biodata)
+            ) {
+                Column(
+                    modifier = Modifier
+                        .fillMaxSize()
+                        .verticalScroll(rememberScrollState())
+                        .padding(horizontal = 24.dp, vertical = 20.dp),
+                    horizontalAlignment = Alignment.CenterHorizontally
+                ) {
+                    // --- Judul & Subjudul ---
+                    Text(
+                        text = stringResource(id = R.string.title_form_biodata),
+                        fontSize = 28.sp,
+                        fontWeight = FontWeight.Bold,
+                        color = colorResource(id = R.color.purple_title)
+                    )
+
+                    Spacer(modifier = Modifier.height(4.dp))
+
+                    Text(
+                        text = stringResource(id = R.string.subtitle_form_biodata),
+                        fontSize = 13.sp,
+                        color = colorResource(id = R.color.text_subtitle_gray)
+                    )
+
+                    Spacer(modifier = Modifier.height(20.dp))
+
 
