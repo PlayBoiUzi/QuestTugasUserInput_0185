@@ -230,6 +230,47 @@ fun FormBiodata(modifier: Modifier = Modifier) {
                                     .clickable { datePickerDialog.show() }
                             )
                         }
+                        // Experience Dropdown
+                        Box(modifier = Modifier.weight(1f)) {
+                            OutlinedTextField(
+                                value = experience,
+                                onValueChange = {},
+                                readOnly = true,
+                                label = { Text(text = stringResource(id = R.string.label_experience)) },
+                                trailingIcon = {
+                                    IconButton(onClick = { expandedExperience = true }) {
+                                        Icon(
+                                            imageVector = Icons.Default.ArrowDropDown,
+                                            contentDescription = stringResource(id = R.string.desc_icon_dropdown)
+                                        )
+                                    }
+                                },
+                                shape = RoundedCornerShape(16.dp),
+                                modifier = Modifier.fillMaxWidth()
+                            )
+                            // Overlay agar seluruh area kotak bisa diklik
+                            Box(
+                                modifier = Modifier
+                                    .matchParentSize()
+                                    .clickable { expandedExperience = true }
+                            )
+
+                            DropdownMenu(
+                                expanded = expandedExperience,
+                                onDismissRequest = { expandedExperience = false }
+                            ) {
+                                experienceOptions.forEach { option ->
+                                    DropdownMenuItem(
+                                        text = { Text(text = option) },
+                                        onClick = {
+                                            experience = option
+                                            expandedExperience = false
+                                        }
+                                    )
+                                }
+                            }
+                        }
+                    }
 
 
 
