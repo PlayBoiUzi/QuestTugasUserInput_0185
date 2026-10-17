@@ -17,3 +17,7 @@
     <string name="exp_3_5">3 - 5 Tahun</string>
     <string name="exp_more_5">> 5 Tahun</string>
 
+    <!-- DatePicker Dialog Buttons -->
+    <string name="btn_ok">OK</string>
+    <string name="btn_cancel">Batal</string>
+
