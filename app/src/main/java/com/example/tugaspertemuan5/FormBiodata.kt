@@ -92,4 +92,17 @@ fun FormBiodata(modifier: Modifier = Modifier) {
         stringResource(id = R.string.exp_more_5)
     )
 
+// --- LOGIKA WARNA BUTTON BERDASARKAN RESOURCE COLOR ---
+    val isSkillSelected = isAndroidChecked || isUiUxChecked || isWebChecked
+    val btnBgColor = if (isSkillSelected) {
+        colorResource(id = R.color.btn_proceed_active_bg)
+    } else {
+        colorResource(id = R.color.btn_proceed_inactive_bg)
+    }
+    val btnTextColor = if (isSkillSelected) {
+        colorResource(id = R.color.btn_proceed_active_text)
+    } else {
+        colorResource(id = R.color.btn_proceed_inactive_text)
+    }
+
 
