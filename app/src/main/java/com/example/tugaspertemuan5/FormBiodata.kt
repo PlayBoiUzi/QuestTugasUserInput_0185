@@ -329,5 +329,57 @@ fun FormBiodata(modifier: Modifier = Modifier) {
 
                     Spacer(modifier = Modifier.height(28.dp))
 
+                    // --- Tombol PROCEED ---
+                    Button(
+                        onClick = {
+                            val selectedSkillsList = mutableListOf<String>()
+                            if (isAndroidChecked) selectedSkillsList.add(androidSkill)
+                            if (isUiUxChecked) selectedSkillsList.add(uiuxSkill)
+                            if (isWebChecked) selectedSkillsList.add(webSkill)
+
+                            val skillText = if (selectedSkillsList.isNotEmpty()) {
+                                selectedSkillsList.joinToString(", ")
+                            } else {
+                                emptyDash
+                            }
+
+                            val summaryMessage = String.format(
+                                previewFormat,
+                                namaDepan.ifEmpty { emptyDash },
+                                namaBelakang.ifEmpty { emptyDash },
+                                email.ifEmpty { emptyDash },
+                                tglLahir.ifEmpty { emptyDash },
+                                experience.ifEmpty { emptyDash },
+                                skillText
+                            )
+
+                            coroutineScope.launch {
+                                val snackbarJob = launch {
+                                    snackbarHostState.showSnackbar(message = summaryMessage)
+                                }
+                                delay(5000) // 5 Detik
+                                snackbarJob.cancel()
+                            }
+                        },
+                        modifier = Modifier
+                            .fillMaxWidth()
+                            .height(50.dp),
+                        shape = RoundedCornerShape(16.dp),
+                        colors = ButtonDefaults.buttonColors(
+                            containerColor = btnBgColor
+                        )
+                    ) {
+                        Text(
+                            text = stringResource(id = R.string.btn_proceed),
+                            fontSize = 16.sp,
+                            fontWeight = FontWeight.Bold,
+                            color = btnTextColor
+                        )
+                    }
+                }
+            }
+        }
+    }
+}
 
 
