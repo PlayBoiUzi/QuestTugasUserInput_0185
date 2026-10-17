@@ -1,2 +1,13 @@
 <resources>
     <string name="app_name">TugasPertemuan5</string>
+
+    <!-- Form Texts -->
+    <string name="title_form_biodata">Form Biodata</string>
+    <string name="subtitle_form_biodata">Silahkan isi biodata Anda dibawah ini !!!</string>
+    <string name="label_nama_depan">Nama Depan</string>
+    <string name="label_nama_belakang">Nama Belakang</string>
+    <string name="label_email">Email</string>
+    <string name="label_tgl_lahir">Tgl Lahir</string>
+    <string name="label_experience">Experience</string>
+    <string name="title_pilih_skill">Pilih Skill Anda :</string>
+
