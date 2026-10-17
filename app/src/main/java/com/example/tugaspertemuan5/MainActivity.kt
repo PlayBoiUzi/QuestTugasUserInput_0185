@@ -17,3 +17,14 @@ class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
+        setContent {
+            TugasPertemuan5Theme() {
+                Scaffold(modifier = Modifier.fillMaxSize()) { innerPadding ->
+                    FormBiodata(
+                        modifier = Modifier.padding(innerPadding)
+                    )
+                }
+            }
+        }
+    }
+}
