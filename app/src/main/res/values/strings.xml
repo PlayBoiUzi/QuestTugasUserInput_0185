@@ -26,3 +26,8 @@
     <string name="skill_uiux">UI/UX</string>
     <string name="skill_web">Web</string>
 
+    <!-- Button & Preview -->
+    <string name="btn_proceed">Proceed</string>
+    <string name="preview_biodata">Nama: %1$s %2$s | Email: %3$s | Tgl: %4$s | Exp: %5$s | Skill: %6$s</string>
+    <string name="empty_value">-</string>
+
