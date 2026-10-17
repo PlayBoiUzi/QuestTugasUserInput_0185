@@ -105,4 +105,23 @@ fun FormBiodata(modifier: Modifier = Modifier) {
         colorResource(id = R.color.btn_proceed_inactive_text)
     }
 
+    // --- SNACKBAR STATE & COROUTINE ---
+    val snackbarHostState = remember { SnackbarHostState() }
+    val coroutineScope = rememberCoroutineScope()
+
+    val emptyDash = stringResource(id = R.string.empty_value)
+    val androidSkill = stringResource(id = R.string.skill_android)
+    val uiuxSkill = stringResource(id = R.string.skill_uiux)
+    val webSkill = stringResource(id = R.string.skill_web)
+    val previewFormat = stringResource(id = R.string.preview_biodata)
+
+    Scaffold(
+        modifier = modifier.fillMaxSize(),
+        snackbarHost = { SnackbarHost(hostState = snackbarHostState) }
+    ) { innerPadding ->
+        Box(
+            modifier = Modifier
+                .fillMaxSize()
+                .padding(innerPadding)
+        ) {
 
