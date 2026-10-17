@@ -18,10 +18,9 @@ class MainActivity : ComponentActivity() {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
         setContent {
-            TugasPertemuan5Theme {
+            TugasPertemuan5Theme() {
                 Scaffold(modifier = Modifier.fillMaxSize()) { innerPadding ->
-                    Greeting(
-                        name = "Android",
+                    FormBiodata(
                         modifier = Modifier.padding(innerPadding)
                     )
                 }
@@ -41,7 +40,7 @@ fun Greeting(name: String, modifier: Modifier = Modifier) {
 @Preview(showBackground = true)
 @Composable
 fun GreetingPreview() {
-    TugasPertemuan5Theme {
+    TugasPertemuan5Theme() {
         Greeting("Android")
     }
 }
