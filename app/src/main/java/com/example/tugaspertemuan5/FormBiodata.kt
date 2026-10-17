@@ -82,3 +82,14 @@ fun FormBiodata(modifier: Modifier = Modifier) {
             calendar.get(Calendar.DAY_OF_MONTH)
         )
     }
+
+    // --- DROPDOWN STATE ---
+    var expandedExperience by remember { mutableStateOf(false) }
+    val experienceOptions = listOf(
+        stringResource(id = R.string.exp_fresh),
+        stringResource(id = R.string.exp_1_2),
+        stringResource(id = R.string.exp_3_5),
+        stringResource(id = R.string.exp_more_5)
+    )
+
+
