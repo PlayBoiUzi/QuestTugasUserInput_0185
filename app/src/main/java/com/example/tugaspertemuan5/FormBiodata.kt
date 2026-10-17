@@ -188,4 +188,17 @@ fun FormBiodata(modifier: Modifier = Modifier) {
                         )
                     }
 
+                    Spacer(modifier = Modifier.height(12.dp))
+
+                    // --- Baris 2: Email ---
+                    OutlinedTextField(
+                        value = email,
+                        onValueChange = { email = it },
+                        label = { Text(text = stringResource(id = R.string.label_email)) },
+                        modifier = Modifier.fillMaxWidth(),
+                        shape = RoundedCornerShape(16.dp)
+                    )
+
+                    Spacer(modifier = Modifier.height(12.dp))
+
 
