@@ -200,5 +200,36 @@ fun FormBiodata(modifier: Modifier = Modifier) {
                     )
 
                     Spacer(modifier = Modifier.height(12.dp))
+                    // --- Baris 3: Tgl Lahir & Experience ---
+                    Row(
+                        modifier = Modifier.fillMaxWidth(),
+                        horizontalArrangement = Arrangement.spacedBy(12.dp)
+                    ) {
+                        // Tgl Lahir
+                        Box(modifier = Modifier.weight(1f)) {
+                            OutlinedTextField(
+                                value = tglLahir,
+                                onValueChange = {},
+                                readOnly = true,
+                                label = { Text(text = stringResource(id = R.string.label_tgl_lahir)) },
+                                trailingIcon = {
+                                    IconButton(onClick = { datePickerDialog.show() }) {
+                                        Icon(
+                                            imageVector = Icons.Default.DateRange,
+                                            contentDescription = stringResource(id = R.string.desc_icon_calendar)
+                                        )
+                                    }
+                                },
+                                shape = RoundedCornerShape(16.dp),
+                                modifier = Modifier.fillMaxWidth()
+                            )
+                            // Overlay agar seluruh area kotak bisa diklik
+                            Box(
+                                modifier = Modifier
+                                    .matchParentSize()
+                                    .clickable { datePickerDialog.show() }
+                            )
+                        }
+
 
 
